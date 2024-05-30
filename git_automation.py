@@ -36,7 +36,7 @@ def push_to_new_branch(branch_name, commit_message):
         f'git checkout -b "{branch_name}"',
         "git add .",
         f'git commit -m "{commit_message}"',
-        f"git push origin {branch_name}"
+        f"git push --set-upstream origin {branch_name}"
     ]
     
     for command in commands:
@@ -95,3 +95,6 @@ if __name__ == "__main__":
             _, __, ___, branch_name, commit_message = input_st.split(" ")
             commit_message = commit_message[1:-1]
             push_to_new_branch(branch_name, commit_message)
+
+
+        #Code will be updated now
